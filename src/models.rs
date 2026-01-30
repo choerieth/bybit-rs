@@ -38,3 +38,26 @@ pub struct BybitResponse<T> {
     pub ret_msg: String,
     pub result: Option<T>,
 }
+
+#[derive(Debug, Deserialize)]
+pub struct SystemStatusResult {
+    pub list: Vec<SystemStatus>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct SystemStatus {
+    pub id: String,
+    pub title: String,
+    pub state: String,
+    pub begin: String,
+    pub end: String,
+    pub href: String,
+    #[serde(rename = "serviceTypes")]
+    pub service_types: Vec<i32>,
+    pub product: Vec<i32>,
+    #[serde(rename = "uidSuffix")]
+    pub uid_suffix: Vec<i32>,
+    #[serde(rename = "maintainType")]
+    pub maintain_type: i32,
+    pub env: i32,
+}
