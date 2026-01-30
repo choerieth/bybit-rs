@@ -24,6 +24,7 @@ pub struct Announcement {
     pub publish_time: Option<i64>,
 }
 
+// Announcements include a nested "type" object, so we model it separately for clarity.
 #[derive(Debug, Deserialize)]
 pub struct AnnouncementType {
     pub title: String,
@@ -60,4 +61,12 @@ pub struct SystemStatus {
     #[serde(rename = "maintainType")]
     pub maintain_type: i32,
     pub env: i32,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct MarketTimeResult {
+    #[serde(rename = "timeSecond")]
+    pub time_second: String,
+    #[serde(rename = "timeNano")]
+    pub time_nano: String,
 }

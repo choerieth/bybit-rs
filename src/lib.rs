@@ -2,7 +2,10 @@ mod client;
 mod models;
 
 pub use client::{AnnouncementParams, BybitClient, SystemStatusParams};
-pub use models::{Announcement, AnnouncementResult, AnnouncementType, SystemStatus, SystemStatusResult};
+pub use models::{
+    Announcement, AnnouncementResult, AnnouncementType, MarketTimeResult, SystemStatus,
+    SystemStatusResult,
+};
 
 #[derive(Debug)]
 pub enum Error {

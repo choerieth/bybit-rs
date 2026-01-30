@@ -1,5 +1,6 @@
 mod announcements;
 mod system;
+mod market;
 
 pub use announcements::AnnouncementParams;
 pub use system::SystemStatusParams;
