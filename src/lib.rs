@@ -1,10 +1,10 @@
 mod client;
 mod models;
 
-pub use client::{AnnouncementParams, BybitClient, SystemStatusParams};
+pub use client::{AnnouncementParams, BybitClient, SystemStatusParams, KlineParams};
 pub use models::{
-    Announcement, AnnouncementResult, AnnouncementType, MarketTimeResult, SystemStatus,
-    SystemStatusResult,
+    Announcement, AnnouncementResult, AnnouncementType, SystemStatus, SystemStatusResult,
+    MarketTimeResult, KlineResult,
 };
 
 #[derive(Debug)]

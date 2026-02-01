@@ -70,3 +70,10 @@ pub struct MarketTimeResult {
     #[serde(rename = "timeNano")]
     pub time_nano: String,
 }
+
+#[derive(Debug, Deserialize)]
+pub struct KlineResult {
+    pub category: Option<String>,
+    pub symbol: Option<String>,
+    pub list: Vec<Vec<String>>,
+}

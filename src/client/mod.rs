@@ -4,6 +4,7 @@ mod market;
 
 pub use announcements::AnnouncementParams;
 pub use system::SystemStatusParams;
+pub use market::KlineParams;
 
 pub struct BybitClient {
     pub(crate) base_url: String,
